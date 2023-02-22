@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="SEBASTIAN QUINTERO">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Pagina web de elementos">
+    <title>PAGINA WEB CON HIPERVINCULOS E IMAGENES</title>
+
+</head>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+        .responsive{
+            max-width: 100%;
+            height: auto;
+        }
+        .responsive,iframe{
+            display: inline-block;
+        }
+        .responsive:hover{
+            filter: grayscale(100%);
+            transform: scale(1.2);
+        }
+    body{
+        background-image: url(img/Baloncesto.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        font-family: 'Silkscreen', cursive;
+    }
+    h1,h2{
+        text-align: center;
+        color: white;
+    }
+    p{
+        font-family: 'Silkscreen', cursive;
+    }
+    </style>
+<body>
+
+
+    <marquee bgcolor="lighblue" behavior="alternate" direction="left" style="font-size: 35px;">PAGINA WEB HIPERVINCULOS</marquee>
+        <!--       Un Anclaje interno         -->   
+        
+    <a id="INICIO"></a><br>
+
+        <!--       Seccion de hipervinculos-->
+    
+    <h1 aling="center">SECCION DE HIPERVINCULOS</h1>
+    <hr><center>
+        <a href="http://www.youtube.com" target="_blank">VER VIDEOS EN YOUTUBE</a><br><br>
+        <a href="http://www.eltiempo.com" target="_blank">VER NOTICIAS EL TIEMPO</a><br><br>
+        <a href="http://www.incap.edu.co" target="_blank">IR A INCAP - Q10</a><br><br>
+        <a href="http://www.unigermana.edu.co" target="_blank">IR A UNIGERMANA - CARRERAS PROFESIONALES</a><br><br>
+        <a href="http://www.as.com" target="_blank">VER NOTICIAS DEPORTIVAS EN AS</a><br><br>
+        <a href="Ejercicio_Sem_3.html" target="_blank">VER TALLER HTML SEMANA 2</a><br><br></center>
+        <hr>
+
+        <!--       Seccion redes sociales      -->
+
+    <h2 align="center">SECCION REDES SOCIALES</h2>
+
+    <center><img class="responsive" src="img/face.png" width="100" height="90" alt="facebook">
+    <img class="responsive" src="img/twitter.png" width="100" height="90" alt="Twitter">
+    <img class="responsive" src="img/instagram.png" width="100" height="90" alt="Instagram"></center>
+    <br><br><br>
+    <hr>
+
+        <!--       Seccion videos embebidos-->
+
+    <h2 align="center">SECCION DE VIDEOS EMBEBIDOS</h2>
+    <br>
+        <center> <iframe  width="560" height="315" src="https://www.youtube.com/embed/TbmSCdn_iUo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+            <iframe  width="560" height="315" src="https://www.youtube.com/embed/TbmSCdn_iUo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
+        <br>
+        <hr>
+    <h3 align="center">PROGRAMA DE DISEÑO GRAFICO</h3>
+
+    <center><img class="responsive" src="img/HTML5.png" alt="html" width="100" height="100">
+    <img class="responsive" src="img/css3.png" alt="css" width="100" height="100">
+    <p>Esta materia de HTML es muy importante conocerla por la continua estructuración de las paginas web</p>
+
+    <p style="color: brown; font-size: 50px;">CSS Es un complemento para colocar estilos basicos y avanzados</p></center>
+
+        <!--   Anclaje interno con imagen  -->
+
+    <center><a href="#INICIO"><img src="img/inicio.jpg" width="80" height="100" alt="inicio"></a></center>
+    <br>
+</body>
+</html>
+
