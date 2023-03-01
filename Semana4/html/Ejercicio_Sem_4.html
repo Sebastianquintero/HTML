@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Y Formulario</title>
+</head>
+<body style="background-color: coral;">
+    <header>
+        <img src="../Semana3/img/incap.jpeg" width="100" height="100" alt="Logo Incap">
+        <h1>Listas En HTML</h1>
+        <h2>Menu Navegacion</h2>
+    </header>
+
+    <nav>
+        <ul>
+            <li type="disc" style="color:red;">Home</li>
+            <li type="square">Productos</li>
+            <li type="cicle">Servicios</li>
+            <li>contacto</li>
+        </ul>
+    </nav>
+
+    <section>
+    <!-- Method GET pasa los datos por la url, atra vez de parametros// Method POST pasa los datos de forma interna (No se ven) -->
+        <form action="datos.php" method="post">
+
+    <!-- Seccion de marco de formulario -->
+
+        <fieldset>
+
+    <!-- Seccion de ingreso de nombre -->
+
+        <label>Nombre Completo:</label>
+        <input name="nombre" type="text" placeholder="Ingrese su nombre completo" required="">
+        <br><br>
+
+    <!-- Seccion email -->
+        <label>E-mail:</label>
+        <input type="email" name="email" placeholder="Ingrese su Email" required="">
+        <br><br>
+
+    <!-- Seccion Contraseña -->
+        <label>Contraseña:</label>
+        <input name="Contraseña" type="password" placeholder="Ingrese su Contraseña" required="">
+        <br><br>
+
+    <!-- Seccion Hobbies -->
+        <label>Seccion de tus Hobbies:</label>
+        <br>
+            <input name="Cine" type="checkbox">Cine<br>
+            <input name="Lectura" type="checkbox">Lectura<br>
+            <input name="Deporte" type="checkbox">Deporte<br>
+        <br>
+        <br>
+
+    <!-- Estado Civil -->
+
+        <label>Estado Civil:</label><br>
+            <input name="estcivil" type="radio" value="casado">Casado(a)<br>
+            <input name="estcivil" type="radio" value="soltero">Soltero(a)<br>
+            <input name="estcivil" type="radio" value="viudo">Viudo(a)<br>
+            <br>
+            <br>
+
+    <!-- Seleccionar opcion lista -->
+        <label>PROGRAMAS TECNICOS:</label>
+        <select name="select">
+            <option>Seleccione programa...</option>
+            <option>Sistemas</option>
+            <option>Diseño grafico</option>
+            <option>Contabilidad</option>
+        </select>
+        <br>
+        <br>
+
+        <label>Tu Comentario:</label><br>
+        <textarea name="mensaje" cols="40" rows="6"></textarea>
+            </fieldset>
+            <br><br>
+
+    <!-- seccion de botones formulario submit: enviar datos cancel: borrar datos ingresados -->
+
+            <button type="submit">Enviar</button>
+            <button type="reset">Cancelar</button>
+            <br>
+            <br>
+        </form>
+    </section>
+
+    <!-- Seccion de pie de pagina -->
+    <footer>
+        derechos reservados &copy;2023&#64;NOMBRE  STD
+    </footer>
+
+    <script>
+        alert('Hola Mundo');
+    </script>
+    
+</body>
+</html>

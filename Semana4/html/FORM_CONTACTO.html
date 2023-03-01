@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario y estilos</title>
+    <link rel="stylesheet" href="../css/contacto.css">
+</head>
+<body>
+    <header>
+        <img src="../img/incap.png" width="100" height="100" alt="logo incap">
+        <h1>Formulario Y Listas HTML</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Productos</li>
+            <li>Servicios</li>
+            <li>Contacto</li>
+        </ul>
+    </nav>
+
+        <section>
+
+            <form action="datos.php" method="post">
+                <!-- Seccion de fielset -->
+
+                <fieldset>
+                    <!-- Seccion ingreso de nombre -->
+
+                    <label for="">Nombre Completo:</label>
+                    <input type="text" name="nombre" placeholder="&#9756;" id="" required>
+
+                    <br><br>
+                    <hr>
+
+                    <!-- seccion de email -->
+
+                    <label>email</label>
+                    <input type="email" name="email"  placeholder="&#9874; ingrese su email" id="" required>
+                    <br><br>
+                    <hr>
+
+                    <!-- Seccione contraseña -->
+
+                    <label for="">Contraseña:</label>
+                    <input type="password" name="password" id="" placeholder="&#9745; ingrese su contraseña" required>
+                    <br><br>
+                    <hr>
+
+                    <!-- Seccion de hobbies -->
+
+                    <label for="">Seleccione sus hobbies:</label>
+                    <br>
+                    <input name="cine" type="checkbox">Cine<br>
+                    <input name="lectura" type="checkbox">lectura<br>
+                    <input name="deporte" type="checkbox">deporte<br>
+                    <br>
+                    <hr>
+
+                    <!-- Estado Civil -->
+
+                    <label for="">Seleccione su estado civil:</label>
+                    <br>
+                    <input name="estcivil" type="radio" value="casado">Casado(a) <br>
+                    <input name="estcivil" type="radio" value="casado">Soltero(a) <br>
+                    <input name="estcivil" type="radio" value="casado">Viudo(a) <br>
+
+                    <br><br>
+                    <hr>
+
+                    <!-- Seccion opcion lista -->
+
+                    <label for="">Programas Tecnicos</label>
+                    <br>
+                    <select name="select" id="">
+                        <option>Seleccione programa...</option>
+                        <option>Sistemas</option>
+                        <option>Diseño grafico</option>
+                        <option>Contabilidad</option>
+                    </select>
+                    <br><br>
+
+                    <!-- Seccion comentarios -->
+
+                    <label>Tu comentario:</label>
+                    <br>
+                    <textarea name="mensaje" id="" cols="200" rows="10"></textarea>
+                    
+                </fieldset>
+
+                <br><br>
+
+                <!-- seccion de botones formulario submit: enviar datos cancel: borrar datos ingresados -->
+
+                <button type="submit">Enviar</button>
+                <button type="reset">Cancelar</button>
+                <br><br>
+            </form>
+        </section>
+
+        <!-- seccion de pie de pagina -->
+
+        <footer>
+            <p>derechos reservados &copy;2023&#64; Sebastian</p>
+        </footer>
+    
+</body>
+</html>
