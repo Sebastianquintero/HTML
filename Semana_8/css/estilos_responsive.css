@@ -1,0 +1,278 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    max-height: 100%;
+}
+body{
+    font-family: tahoma;
+    font-size: 18px;
+    background-image: url(../img/incapchapinero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Seccion cabecera pagina web */
+#header{
+    background-color: lightskyblue;
+    border: 2px solid blue;
+    border-radius: 20px 20px 10px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    grid-area: header; /* nombre par el display grid */
+}
+ul{
+    padding: 0 0;
+    margin: 0 1px;
+}
+li{
+    display: inline;
+    list-style: none;
+    margin: 0 5px;
+    font: bold 12px verdana;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+/* Seccion barra menu nav */
+
+#menu{
+    grid-area: nav; /* nombre para el display grid */
+    background-color: blue;
+    border: 2px solid green;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+}
+
+/* estilos del buscador web */
+
+.buscarbox input{
+    height: 25px;
+    width: 0px;
+    padding: 0 0;
+    border-radius: 40px;
+    border: 0px;
+    padding-right: 50px;
+    transition: 0.8s ease;
+}
+.buscarbox input:hover{
+    width: 150px;
+    padding-left: 10px;
+    outline: none;
+}
+/* seccion contenido principal section */
+
+#main{
+    grid-area: main; /* nombre para el display grid */
+    background-color: rgba(255, 255, 255, 0.6); 
+    border: 2px solid green;
+    max-width: 100%;
+    height: auto;
+    backdrop-filter: blur(5px);
+}
+figure{
+    display: inline;
+    margin: 45px;
+    padding: 5px 5px;
+}
+/* seccion article programas escuelas incap */
+.programa{
+    display: inline-block;
+    margin: 5px 5px;
+    padding: 5px 5px;
+    width: 45%; /* son dos imagenes por fila */
+    height: 200px; 
+    position: relative;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+section article{
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+    margin: 20px;
+}
+/* seccion barra lateral aside */
+#sidebar{
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+}
+iframe{
+    max-width: 100%;
+    height: auto;
+}
+/* seccion footer */
+#footer{
+    grid-area: footer; /* nombre para el display grid*/
+    padding-top: 20px;
+    border: 2px solid green;
+    border-radius: 20px;
+    clear: both;
+    background-color: rgba(255,255,255, 0.6);
+    backdrop-filter: blur(5px);
+}
+#redes a{
+    padding: 5px;
+    margin: 0px;
+}
+#redes a i:hover{
+    transform: scale(1.5);
+}
+/* seccion de estilos de fontawasome */
+i[class^="fa"]{
+    color: gray;
+    font-size: 18px;
+}
+i[class^="fa"]{
+    color: gray;
+    font-size: 20px;
+    border: 1px solid transparent;
+    margin: 0;
+}
+.openmenu{
+    display: none;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+/* SECCION CSS GRID PARA DISEÑO WEB RESPONSIVE */ 
+#grid-container > * {
+    text-align: center;
+    box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.75);
+}
+
+/* SECCION ESTILOS CONTENEDOR GRID PARA PC */
+
+#grid-container{
+    display: grid;
+    grid-gap: 10px;
+    grid-template: 
+    "header header header" 150px
+    "nav nav nav" 50px
+    "main main sidebar" 300px
+    "main main sidebar" 300px
+    "main main sidebar" 250px
+    "footer footer footer" 150px /
+    1200px 350px 300px;
+}
+/* SECCION VISTA TABLETS 2 COL */
+@media(max-width:1024px) {
+    #grid-container{
+        grid-template:
+        "header header" 170px
+        "nav main" 800px
+        "nav main" 700px
+        "sidebar sidebar" 650px
+        "footer footer" 100px /
+        250px 450px;
+        font-size: 75%;
+    }
+
+    #menu{
+        background-color: blue;
+        border-radius: 22px;
+        display: block;
+        padding: 45px;
+        margin:40px;
+        height: auto;
+        text-align: center;
+    }
+    #main{
+    display: flex;
+    flex-direction: column;/* cambia la forma de dirección de fila a col*/
+    justify-content: space-between;
+    align-items:center;
+    flex-wrap: wrap;/*se define el auto ajuste de ancho dispostivo pasa a sgte. linea*/
+    max-width:100%;
+
+    }
+    .programa{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid black; 
+    
+}
+iframe{
+    max-width: 100%;
+    height: auto;
+}
+.buscarbox{
+    display:block;
+    padding: 5px;
+}
+}
+/* SECCION VISTA CELULAR 1 COLUMNA */
+@media(max-width:640px){
+    #grid-container {
+        grid-template:
+        "header" 150px
+        "nav" 50px
+        "main" 1120px
+        "sidebar" 800px
+        "footer" 100px /
+        500px;
+        font-size: 60%;
+    }
+
+    /* Nota: la barra <nav> se programará con javascript_ por medio de funciones en boton hamburguesa*/
+#menu{
+        display: none;/* se oculta contenedor nav opciones*/
+    } 
+    /* se define que aparezca el menu hamburguesa en la parte superior*/
+    .openmenu{
+        display: block;
+        position:absolute;
+        top:10px;
+        right:120px;
+        z-index:99;/* se define capa encima del texto de contenido HTML*/
+        cursor: pointer;
+        }
+    
+    #main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items:center;
+        flex-wrap: wrap;
+        max-width: 100%;
+        height: auto;
+    }
+.programa{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid black; 
+    }
+iframe{
+    max-width: 100%;
+    height: auto;
+}
+.buscarbox{
+    display:none;
+}
+
+
+}
